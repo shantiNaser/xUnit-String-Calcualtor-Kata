@@ -6,6 +6,7 @@ namespace Test.Tests
 {
     public class Calculator
     {
+        Kata numberAsStr = new Kata();
     
         [Theory]
         [InlineData("", 0)]
@@ -15,7 +16,6 @@ namespace Test.Tests
         [InlineData("2,3,3,2,5,6,4,3", 28)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByComma(string input, int expected)
         {
-           Kata numberAsStr = new Kata();
            var actual = numberAsStr.add(input);
            Assert.Equal(expected, actual);
         }
@@ -23,7 +23,6 @@ namespace Test.Tests
         [Fact]
         public void ShouldREturnZeroIfInputIsNull()
         {
-            Kata numberAsStr = new Kata();
             var actual = numberAsStr.add(null);
             Assert.Equal(0,actual);
         }
@@ -33,7 +32,6 @@ namespace Test.Tests
         [InlineData("1,\n",-99999)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByNewLine(string input, int expected)
         {
-            Kata numberAsStr = new Kata();
             var actual = numberAsStr.add(input);
             Assert.Equal(expected,actual);
         }
@@ -45,7 +43,6 @@ namespace Test.Tests
         [InlineData("//%\n4%6",10)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByDifferentDilmater(string input, int expected)
         {
-            Kata numberAsStr = new Kata();
             var actual = numberAsStr.add(input);
             Assert.Equal(expected,actual);
         }
@@ -55,7 +52,6 @@ namespace Test.Tests
         // [InlineData("1,-2", "negatives not allowed: -2")]
         // public void Add_WithNegativeNumbers_ThrowsException(string input, string exceptionMessage)
         // {
-        //     Kata numberAsStr = new Kata();
         //     ArgumentException ex = Assert.Throws<ArgumentException>(() => numberAsStr.add(input));
         //     Assert.Equal(exceptionMessage, ex.Message);
         // }
@@ -67,7 +63,6 @@ namespace Test.Tests
         [InlineData("1000,2",2)]
         public void ShouldIgnoreTheBigNumberValue(string input, int expected)
         {
-            Kata numberAsStr = new Kata();
             var actual = numberAsStr.add(input);
             Assert.Equal(expected,actual);
         }
