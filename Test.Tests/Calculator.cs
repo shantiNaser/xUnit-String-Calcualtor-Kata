@@ -39,7 +39,14 @@ namespace Test.Tests
         }
         
 
-
+        [Theory]
+        [InlineData("//;\n1;2",3)]
+        public void ShouldReturnTheSumOfNumbersinStringSplitedByDifferentDilmater(string input, int expected)
+        {
+            Kata numberAsStr = new Kata();
+            var actual = numberAsStr.add(input);
+            Assert.Equal(expected,actual);
+        }
     
     }
 }
