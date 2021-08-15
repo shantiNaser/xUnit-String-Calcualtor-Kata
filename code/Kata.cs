@@ -7,7 +7,7 @@ namespace code
        public int add(string numbers)
        {
            int result =0;
-           if(numbers == "")
+           if(numbers == "" || numbers == null)
            {
                return 0;
            }
@@ -21,5 +21,7 @@ namespace code
             return result;
            }
        }
+
+       
+       }
     }
-}

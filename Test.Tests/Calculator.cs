@@ -20,6 +20,16 @@ namespace Test.Tests
            Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void ShouldREturnZeroIfInputIsNull()
+        {
+            Kata numberAsStr = new Kata();
+            var actual = numberAsStr.add(null);
+            Assert.Equal(0,actual);
+        }
+
+        
+
 
     
     }
