@@ -59,6 +59,18 @@ namespace Test.Tests
         //     ArgumentException ex = Assert.Throws<ArgumentException>(() => numberAsStr.add(input));
         //     Assert.Equal(exceptionMessage, ex.Message);
         // }
+
+
+        [Theory]
+        [InlineData("10000,3,4",7)]
+        [InlineData("//$\n3$2$10000",5)]
+        [InlineData("1000,2",2)]
+        public void ShouldIgnoreTheBigNumberValue(string input, int expected)
+        {
+            Kata numberAsStr = new Kata();
+            var actual = numberAsStr.add(input);
+            Assert.Equal(expected,actual);
+        }
     
     }
 }

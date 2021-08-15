@@ -70,8 +70,14 @@ namespace code
                             string[] collection = subnumbers.Split(diamaters[2]);
                             foreach (var item in collection)
                             {
-                                
-                                 result += Int16.Parse(item);
+                                if(Int16.Parse(item) >= 1000)
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    result += Int16.Parse(item);
+                                }
                                 
                             }
                             return result;
@@ -81,7 +87,14 @@ namespace code
                             string[] collection = numbers.Split(new Char [] {',' , '\n' });
                             foreach (var item in collection)
                             {
-                                result += Int16.Parse(item);
+                                if(Int16.Parse(item) >= 1000)
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    result += Int16.Parse(item);
+                                }
                             }
                             return result;
                         }
