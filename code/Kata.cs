@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+
 
 namespace code
 {
@@ -23,6 +25,27 @@ namespace code
            return (numbers.StartsWith("//"));
        }
 
+       public void CheckForNegativeNumber(string numbers)
+       {
+          char[] Arr = numbers.ToCharArray();
+          var arlist = new ArrayList();
+          char result ;
+          foreach(var item in Arr)
+          {
+           arlist.Add(item);
+          }
+          for(int i=0 ; i<arlist.Count ; i++)
+          {
+              result = Convert.ToChar(arlist[i]);
+              if(result == '-')
+              {
+                string Msg = $"negatives not allowed: -{arlist[i+1]}";
+                throw new ArgumentException(Msg);
+              }
+          }
+        
+       }
+
 
        public int add(string numbers)
        {
@@ -34,19 +57,22 @@ namespace code
            else
            {
                try
-               {
+               { 
+                    CheckForNegativeNumber(numbers); 
                     bool Check = CheckForValid(numbers);
                     if(Check)
                     {   
+
                         if(isSpecialCharacter(numbers))
                         {
-
                             char[] diamaters = numbers.ToCharArray(); 
                             string subnumbers = numbers.Substring(4);
                             string[] collection = subnumbers.Split(diamaters[2]);
                             foreach (var item in collection)
                             {
-                                result += Int16.Parse(item);
+                                
+                                 result += Int16.Parse(item);
+                                
                             }
                             return result;
                         }

@@ -49,6 +49,16 @@ namespace Test.Tests
             var actual = numberAsStr.add(input);
             Assert.Equal(expected,actual);
         }
+
+
+        // [Theory]
+        // [InlineData("1,-2", "negatives not allowed: -2")]
+        // public void Add_WithNegativeNumbers_ThrowsException(string input, string exceptionMessage)
+        // {
+        //     Kata numberAsStr = new Kata();
+        //     ArgumentException ex = Assert.Throws<ArgumentException>(() => numberAsStr.add(input));
+        //     Assert.Equal(exceptionMessage, ex.Message);
+        // }
     
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+
 
 namespace code
 {
@@ -9,7 +11,7 @@ namespace code
         static void Main(string[] args)
         {
            Kata K = new Kata();
-           int g = K.add("");
+           int g = K.add("1,4,-1");
            System.Console.WriteLine(g);
         
         }
