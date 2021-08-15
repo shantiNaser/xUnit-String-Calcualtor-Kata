@@ -13,7 +13,7 @@ namespace Test.Tests
         [InlineData("2,3", 5)]
         [InlineData("2,3,3", 8)]
         [InlineData("2,3,3,2,5,6,4,3", 28)]
-        public void ShouldReturnTheSumOfNumbersinString(string input, int expected)
+        public void ShouldReturnTheSumOfNumbersinStringSplitedByComma(string input, int expected)
         {
            Kata numberAsStr = new Kata();
            var actual = numberAsStr.add(input);
@@ -28,6 +28,15 @@ namespace Test.Tests
             Assert.Equal(0,actual);
         }
 
+        [Theory]
+        [InlineData("1\n2,3",6)]
+        [InlineData("1,\n",-99999)]
+        public void ShouldReturnTheSumOfNumbersinStringSplitedByNewLine(string input, int expected)
+        {
+            Kata numberAsStr = new Kata();
+            var actual = numberAsStr.add(input);
+            Assert.Equal(expected,actual);
+        }
         
 
 
