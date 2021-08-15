@@ -40,8 +40,10 @@ namespace code
                     {   
                         if(isSpecialCharacter(numbers))
                         {
+
+                            char[] diamaters = numbers.ToCharArray(); 
                             string subnumbers = numbers.Substring(4);
-                            string[] collection = subnumbers.Split(SpecialDileamter);
+                            string[] collection = subnumbers.Split(diamaters[2]);
                             foreach (var item in collection)
                             {
                                 result += Int16.Parse(item);

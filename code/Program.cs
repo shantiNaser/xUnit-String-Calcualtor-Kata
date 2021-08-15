@@ -11,7 +11,7 @@ namespace code
            Kata K = new Kata();
            int g = K.add("");
            System.Console.WriteLine(g);
-
+        
         }
     }
 }

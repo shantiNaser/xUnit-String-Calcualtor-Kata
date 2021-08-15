@@ -41,6 +41,8 @@ namespace Test.Tests
 
         [Theory]
         [InlineData("//;\n1;2",3)]
+        [InlineData("//$\n3$2",5)]
+        [InlineData("//%\n4%6",10)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByDifferentDilmater(string input, int expected)
         {
             Kata numberAsStr = new Kata();
