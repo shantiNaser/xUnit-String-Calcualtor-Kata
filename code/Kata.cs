@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+ using System.Collections.Generic;
 
 
 namespace code
@@ -24,37 +25,51 @@ namespace code
             }
        }  
 
+       public int ReturnTheFinalResult(string [] collections)
+       {
+           int result =0;
+           foreach (var item in collections)
+            {
+                if(Int16.Parse(item) >= 1000)
+                    {
+                        continue;
+                    }
+                else
+                {
+                    result += Int16.Parse(item);
+                }
+                
+            }
+            return result;
+       }
+
        public bool isSpecialCharacter(string numbers)
        {
            return (numbers.StartsWith("//"));
        }
 
 
-       public void CheckForNegativeNumber(string numbers)
+       public bool CheckForNegativeNumber(string numbers)
        {
-          char[] Arr = numbers.ToCharArray();
-          var arlist = new ArrayList();
-          char result ;
-          foreach(var item in Arr)
-          {
-           arlist.Add(item);
-          }
-          for(int i=0 ; i<arlist.Count ; i++)
-          {
-              result = Convert.ToChar(arlist[i]);
-              if(result == '-')
-              {
-                string Msg = $"negatives not allowed: -{arlist[i+1]}";
-                throw new ArgumentException(Msg);
-              }
-          }
+        var list = new List<char>();
+        for (int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i]== '-')
+                {
+                    list.Add(numbers[i+1]);
+                    continue;
+                }
+            }
+            string Msg = $"negatives not allowed  : -{string.Join(", -", list)}";
+            System.Console.WriteLine(Msg);
+            return true;
+             // throw new ArgumentException(Msg);
         
        }
 
 
        public int add(string numbers)
        {
-           int result =0;
            if(String.IsNullOrEmpty(numbers))
            {
                return 0;
@@ -62,30 +77,17 @@ namespace code
            else
            {
                try
-               { 
-                    CheckForNegativeNumber(numbers); 
+               {
+                    // CheckForNegativeNumber(numbers);
                     bool Check = CheckForValid(numbers);
                     if(Check)
                     {   
 
                         if(isSpecialCharacter(numbers))
                         {
-                            char[] diamaters = numbers.ToCharArray(); 
                             string subnumbers = numbers.Substring(4);
-                            string[] collection = subnumbers.Split(diamaters[2]);
-                            foreach (var item in collection)
-                            {
-                                if(Int16.Parse(item) >= 1000)
-                                {
-                                    continue;
-                                }
-                                else
-                                {
-                                    result += Int16.Parse(item);
-                                }
-                                
-                            }
-                            return result;
+                            string[] collection = subnumbers.Split(numbers.Substring(2,1));
+                            return ReturnTheFinalResult(collection);
                         }
                         else
                         {
@@ -93,36 +95,14 @@ namespace code
                             {
                                 string FinallNumber = numbers.Substring(0,numbers.Length -1);
                                 string [] collection = FinallNumber.Split(",");
-                                foreach (var item in collection)
-                            {
-                                if(Int16.Parse(item) >= 1000)
-                                {
-                                    continue;
-                                }
-                                else
-                                {
-                                    result += Int16.Parse(item);
-                                }
-                            }
-                            return result;
+                                return ReturnTheFinalResult(collection);
                             }
 
                             else
                             {
 
                             string[] collection = numbers.Split(new Char [] {',' , '\n' });
-                            foreach (var item in collection)
-                            {
-                                if(Int16.Parse(item) >= 1000)
-                                {
-                                    continue;
-                                }
-                                else
-                                {
-                                    result += Int16.Parse(item);
-                                }
-                            }
-                            return result;
+                            return ReturnTheFinalResult(collection);
                         }
                             }
                             
