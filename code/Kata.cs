@@ -14,6 +14,10 @@ namespace code
               return false;
             }
            
+            else if(numbers.EndsWith(","))
+            {
+                return true;
+            }
             else
             {
                 return true;
@@ -24,6 +28,7 @@ namespace code
        {
            return (numbers.StartsWith("//"));
        }
+
 
        public void CheckForNegativeNumber(string numbers)
        {
@@ -50,7 +55,7 @@ namespace code
        public int add(string numbers)
        {
            int result =0;
-           if(numbers == "" || numbers == null)
+           if(String.IsNullOrEmpty(numbers))
            {
                return 0;
            }
@@ -84,6 +89,27 @@ namespace code
                         }
                         else
                         {
+                            if(numbers.EndsWith(","))
+                            {
+                                string FinallNumber = numbers.Substring(0,numbers.Length -1);
+                                string [] collection = FinallNumber.Split(",");
+                                foreach (var item in collection)
+                            {
+                                if(Int16.Parse(item) >= 1000)
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    result += Int16.Parse(item);
+                                }
+                            }
+                            return result;
+                            }
+
+                            else
+                            {
+
                             string[] collection = numbers.Split(new Char [] {',' , '\n' });
                             foreach (var item in collection)
                             {
@@ -98,6 +124,8 @@ namespace code
                             }
                             return result;
                         }
+                            }
+                            
                     
                     }
                     else
