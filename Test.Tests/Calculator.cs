@@ -13,8 +13,15 @@ namespace Test.Tests
         [InlineData("2", 2)]
         [InlineData("2,3", 5)]
         [InlineData("2,3,3", 8)]
-        [InlineData("2,3,3,2,5,6,4,3", 28)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByComma(string input, int expected)
+        {
+           var actual = numberAsStr.add(input);
+           Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData("2,3,3,2,5,6,4,3", 28)]
+        public void ShouldReturnTheSumOfBigNumbersinStringSplitedByComma(string input, int expected)
         {
            var actual = numberAsStr.add(input);
            Assert.Equal(expected, actual);
