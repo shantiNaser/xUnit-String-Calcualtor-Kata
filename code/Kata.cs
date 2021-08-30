@@ -130,8 +130,8 @@ namespace code
                     }
                     else
                     {    
-                            // not special character and not valid number 
-                            return -99999;
+                        System.Console.WriteLine("the following input is NOT ok:");
+                        return 0;
                     }
                     
                }

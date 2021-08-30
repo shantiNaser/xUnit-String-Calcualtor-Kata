@@ -36,7 +36,7 @@ namespace Test.Tests
 
         [Theory]
         [InlineData("1\n2,3",6)]
-        [InlineData("1,\n",-99999)]
+        [InlineData("1,\n",0)]
         public void ShouldReturnTheSumOfNumbersinStringSplitedByNewLine(string input, int expected)
         {
             var actual = numberAsStr.add(input);
