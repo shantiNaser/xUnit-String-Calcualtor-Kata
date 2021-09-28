@@ -88,7 +88,6 @@
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/code.dll
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/code.pdb
-/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.csprojAssemblyReference.cache
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.AssemblyInfoInputs.cache
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.AssemblyInfo.cs
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.csproj.CoreCompileInputs.cache
@@ -96,3 +95,8 @@
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.dll
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.pdb
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.genruntimeconfig.cache
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/code.deps.json
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/code.runtimeconfig.json
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/bin/Debug/netcoreapp3.1/code.runtimeconfig.dev.json
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.csproj.AssemblyReference.cache
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/Test.Tests/obj/Debug/netcoreapp3.1/Test.Tests.GeneratedMSBuildEditorConfig.editorconfig

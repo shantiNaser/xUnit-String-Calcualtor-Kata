@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
  using System.Collections.Generic;
 
@@ -67,7 +68,7 @@ namespace code
         
        }
 
-
+        #region  BasicSolution
        public int add(string numbers)
        {
            if(String.IsNullOrEmpty(numbers))
@@ -123,7 +124,62 @@ namespace code
             
            }
        }
+       #endregion
 
+       // Code -- Using Linq ...
+
+       public string ReturnNewFormat(string numbers)
+       {
+           string subnumbers = numbers.Substring(4);
+           return subnumbers;
+       }
+
+       public int NegativeNotAllowed(string numbers)
+       {
+        var list = new List<char>();
+        for (int i = 0; i < numbers.Length; i++)
+            {
+                if(numbers[i]== '-')
+                {
+                    list.Add(numbers[i+1]);
+                    continue;
+                }
+            }
+            string Msg = $"negatives not allowed  : -{string.Join(", -", list)}";
+            System.Console.WriteLine(Msg);
+            return 0; // it must throw an Exception here
+       }
+
+       public int IgnoreBigNumber(int [] collections)
+       {
+           int result =0;
+           foreach (var item in collections)
+            {
+                if(item >= 1000)
+                    {
+                        continue;
+                    }
+                else
+                {
+                    result += item;
+                }
+                
+            }
+            return result;
+       }
+        
+        public int AddUsingLinq(string number)
+        {
+             var ArrayElemant = string.IsNullOrEmpty(number) ? 0 
+                                : number.Contains("-") ? NegativeNotAllowed(number)
+                                : number.StartsWith("//") ? 
+                                IgnoreBigNumber(ReturnNewFormat(number).Split(number.Substring(2,1)).Select(int.Parse).ToArray())
+                                : number.Contains("\n,") || number.Contains(",\n") ? 0
+                                : IgnoreBigNumber(number.Split(new Char [] {',' , '\n' }).Select(int.Parse).ToArray());
+
+            
+            return ArrayElemant;          
+        }
        
        }
     }

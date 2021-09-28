@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 
 
 namespace code
@@ -11,7 +12,7 @@ namespace code
         static void Main(string[] args)
         {
            Kata K = new Kata();
-           int g = K.add("1,2,3");
+           int g = K.AddUsingLinq("//$\n3$2$10000");
            System.Console.WriteLine(g);
 
         
