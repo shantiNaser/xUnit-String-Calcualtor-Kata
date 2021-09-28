@@ -3543,6 +3543,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/code.csproj": {
               "projectPath": "/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/code.csproj"
@@ -3558,6 +3559,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -3591,7 +3593,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.410/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

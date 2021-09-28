@@ -3,10 +3,11 @@
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/bin/Debug/netcoreapp3.1/code.runtimeconfig.dev.json
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/bin/Debug/netcoreapp3.1/code.dll
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/bin/Debug/netcoreapp3.1/code.pdb
-/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.csprojAssemblyReference.cache
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.AssemblyInfoInputs.cache
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.AssemblyInfo.cs
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.csproj.CoreCompileInputs.cache
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.dll
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.pdb
 /Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.genruntimeconfig.cache
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.csproj.AssemblyReference.cache
+/Users/macbookpro/Desktop/Foothill/xUnit-String-Calcualtor-Kata/code/obj/Debug/netcoreapp3.1/code.GeneratedMSBuildEditorConfig.editorconfig
